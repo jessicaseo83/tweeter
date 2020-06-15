@@ -2,9 +2,10 @@ nav {
   height: 120px;
   width: 100vw;
   background-color: #4056A1;
-  font-family: 'Bungee', sans-serif;
+  
   color: #FFFFFF;
-  display: flexbox;
+  display: inline-block;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5em;
@@ -14,4 +15,5 @@ nav {
 span {
   display: inline-block;
   padding: 10px;
+  font-family: 'Bungee', sans-serif;
 }
