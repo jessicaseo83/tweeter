@@ -1,0 +1,16 @@
+header {
+  width: inherit;
+  height: 400px;
+  background-color: #f0a000;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
