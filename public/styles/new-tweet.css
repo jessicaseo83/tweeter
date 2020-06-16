@@ -10,10 +10,10 @@ form {
   background-color: transparent;
   border-width: 0 0 4px;
   border-color: #42484F;
-  margin: 1em 0 1em;
+  margin: 0.8em 0 0.8em;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1em;
-  color: #42484F
+  color: #545149
 }
 
 button {
@@ -22,12 +22,8 @@ button {
   color: #FFFFFF;
 }
 
-main div {
+.btn-counter {
   display: flex;
   justify-content: space-between;
-}
-
-.counter {
   font-family: "Bungee", sans-serif;
-
 }
