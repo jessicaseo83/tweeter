@@ -9,6 +9,8 @@ $(document).ready(function () {
     const length = $(this).val().length;
     if(max - length < 0) {
       $(".counter").css('color', 'red')
+    } else {
+      $(".counter").css('color', 'grey')
     }
 
   })
