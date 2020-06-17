@@ -7,8 +7,9 @@ $(document).ready(function () {
 
     const max = 140;
     const length = $(this).val().length;
-    if(max - length < 0) {
-      $(".counter").css('color', 'red')
+
+    if (max - length < 0) {
+      $(".counter").css('color', 'red');
     } else {
       $(".counter").css('color', 'grey')
     }
