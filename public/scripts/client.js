@@ -7,13 +7,14 @@
 
 
 
-//
+// escape funtion for preventing XSS
 const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
 
+// render tweets
 const renderTweets = function(tweets) {
   $('.article-tweet').empty();
   for(let tweet of tweets) {
@@ -21,7 +22,7 @@ const renderTweets = function(tweets) {
   }
 }
 
-
+// new tweet creater
 const createTweetElement = function(tweet) {
 
   let newTweet = `
@@ -42,11 +43,7 @@ const createTweetElement = function(tweet) {
   return newTweet;
 }
 
-// const $tweet = createTweetElement(exampleTweet);
-// console.log($tweet);
-// $('.article-tweet').append($tweet);
-
-
+// submit with JQuery and Ajax
 $(document).ready(function () {
 
   
@@ -87,6 +84,7 @@ $(document).ready(function () {
     }
   })
   
+  // Tweet loader
   const loadTweets = function() {
     $.ajax({
       url: '/tweets',
