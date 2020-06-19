@@ -21,24 +21,4 @@ header div p {
   color: white;
 }
 
-@media only screen and (min-width: 1024px) {
-  body>header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2em;
-    height: 20em;
-
-    
-  }
-
-}
-
-@media only screen and (max-width: 1024px){
-  header {
-    display: flex;
-    width: 100%;
-    height: 100%;;
-  }
-}
 
