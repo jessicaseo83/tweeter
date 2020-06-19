@@ -12,15 +12,15 @@ const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+};
 
 // render tweets
 const renderTweets = function(tweets) {
   $('.article-tweet').empty();
-  for(let tweet of tweets) {
-    $('.article-tweet').prepend(createTweetElement(tweet))
+  for (let tweet of tweets) {
+    $('.article-tweet').prepend(createTweetElement(tweet));
   }
-}
+};
 
 // new tweet creater
 const createTweetElement = function(tweet) {
@@ -39,12 +39,12 @@ const createTweetElement = function(tweet) {
       <div class="btns"><img src="/images/flag.png"><img src="/images/retweet.png"><img src="/images/heart.png"></div>
     </footer>
   </article>
-  `
+  `;
   return newTweet;
-}
+};
 
 // submit with JQuery and Ajax
-$(document).ready(function () {
+$(document).ready(function() {
 
   
   $('form').submit (function(event) {
@@ -53,7 +53,6 @@ $(document).ready(function () {
     
   
     if (input.length > 140) {
-      // alert("It's too long!");
   
       $(".error").replaceWith("<div class='error'>⛔️ It's too long! (Max 140 Character) ⛔️</div>")
       $(".error").slideDown();

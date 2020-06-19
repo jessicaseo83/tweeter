@@ -13,12 +13,14 @@ form {
   margin: 1.8em 0 0.8em;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 0.8em;
-  color: #545149
+  color: #545149;
+  resize: none;
 }
 
 button {
   background-color: #4056A1;
   font-family: "Bungee", sans-serif;
+  font-size: 0.7em;
   color: #FFFFFF;
 }
 
