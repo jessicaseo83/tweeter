@@ -30,143 +30,178 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- 
- main {
-   width: 90%;
-   margin-left: 5%;
-   margin-right: 5%;
-   background-color: #f4f1ec;
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   
+.tweet-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main {
+  background-color: #f4f1ec;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+article {
+  width: 100%;
+  margin-bottom: 1em;
+  border: solid;
+  border-width: 4px;
+  border-color: #42484F;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+article:hover{
+  box-shadow: 10px 10px 5px 0px darkgrey; 
+  font-weight: 600;
+  visibility: visible;
+  
+}
+
+.article-tweet {
+  width: 100%;
+  margin-top: 2em;
+  display: flex;
+  font-weight: lighter;
+  flex-direction: column;
+}
+
+.article-tweet article header{
+  background-color: transparent;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  padding-bottom: 1em;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.name{
+  color: #545149;
+  display: flex;
+  align-items: center;   
+}
+
+.name img {
+  width: 2.5em;
+  margin: 1rem;
+}
+
+.tweet {
+  display: inline-block;
+  margin-top: 2rem;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding: 0 1rem 1rem 1rem;
+
+  border: solid;
+  border-width: 0 0 4px;
+  border-color: #42484F;
+}
+.tweet > p {
+  word-wrap: break-word;
+} 
+
+/* hover */
+article .handle {
+  color: lightgray;
+  visibility: hidden;
+}
+
+article:hover .handle {
+  color: lightgray;
+  visibility: visible;
+  margin-right: 1.5em;
+}
+
+article:hover .btns {
+  visibility: visible;
+}
+
+
+/* footer */
+footer {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  margin-left: 2.5rem;
+  margin-right: 3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btns {
+  visibility: hidden;
+}
+
+.btns img {
+  width: 0.8rem;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+  opacity: 0.7;
+}
+
+
+/* error message */
+.error {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 0.5em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  padding-right: 0.5em;
+  color: red;
+  
+  border: 3px solid;
+  border-color: red;
+  display: none;
+  
+}
+
+
+/* media query */
+@media only screen and (min-width: 1024px) {
+  body{
+  display: flex;
+  flex-direction: row;
+  margin-top: 5em;
   }
-  
-  article {
-    width: 100%;
-    height: 15em;
-    margin-bottom: 1em;
-    border: solid;
-    border-width: 4px;
-    border-color: #42484F;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  
-  }
-  
-  article:hover{
-    box-shadow: 10px 10px 5px 0px darkgrey; 
-    font-weight: 600;
-    visibility: visible;
-    
-    
+  header{
+    flex: 1 1 30%
+
   }
 
-  
-  .article-tweet {
-    width: 100%;
-    margin-top: 2em;
-    display: flex;
-    font-weight: lighter;
-    flex-direction: column;
+  main {
+    flex: 1 1 70%
   }
-  
-  .article-tweet article header{
-    background-color: transparent;
-    margin-top: 1.5rem;
-    margin-right: 1rem;
-    padding-top: 2rem;;
-    padding-bottom: 3em;
-    height: 2em;
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    
+}
+
+
+@media only screen and (max-width: 1024px) {
+  header {
+    flex: 1 1 100%
   }
-  
-  .name{
-    color: #545149;
-    display: flex;
-    align-items: center;
-    
+
+  main {
+    flex: 1 1 100%
   }
-  
-  .name img {
-    width: 2.5em;
-    margin: 1rem;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 420px){
+ 
+  body {
+    font-size: 12px;
   }
-  
-  article .handle {
-    color: lightgray;
-    visibility: hidden;
+
+  article {
+    border-width: 3px;
   }
-  
-  article:hover .handle {
-    color: lightgray;
-    visibility: visible;
-    margin-right: 1.5em;
-  }
-  
-  
-  .tweet {
-    display: inline-block;
-    margin-top: 2rem;
-    margin-left: 1em;
-    margin-right: 1em;
-    padding: 0 1rem 1rem 1rem;
-    width: 90% ;
-    border: solid;
-    border-width: 0 0 4px;
-    border-color: #42484F;
-  }
-  
-  .tweet > p {
-    word-wrap: break-word;
-  } 
-  
-  
-  
-  footer {
-    font-size: 0.8rem;
-    margin-top: 1rem;
-    margin-left: 2.5rem;
-    margin-right: 3rem;
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  
-  .btns img {
-    width: 0.8rem;
-    margin-right: 0.5em;
-    margin-left: 0.5em;
-    opacity: 0.7;
-  }
-  
-  .error {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    padding-left: 0.5em;
-    padding-top: 0.25em;
-    padding-bottom: 0.25em;
-    padding-right: 0.5em;
-    color: red;
-    
-    border: 3px solid;
-    border-color: red;
-    display: none;
-    
-  }
-  
-  
-   @media only screen and (min-width: 1024px) {
-    body{
-    display: flex;
-    flex-direction: row;
-    margin-top: 5em;
-    }
-  }
+}
