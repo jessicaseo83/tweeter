@@ -11,10 +11,10 @@ $(document).ready(function () {
     if (max - length < 0) {
       $(".counter").css('color', 'red');
     } else {
-      $(".counter").css('color', 'grey')
+      $(".counter").css('color', 'grey');
     }
 
-  })
+  });
 
 });
 

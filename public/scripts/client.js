@@ -47,26 +47,26 @@ const createTweetElement = function(tweet) {
 $(document).ready(function() {
 
   
-  $('form').submit (function(event) {
+  $('form').submit(function(event) {
     event.preventDefault();
     const input = $("textarea").val();
     
   
     if (input.length > 140) {
   
-      $(".error").replaceWith("<div class='error'>⛔️ It's too long! (Max 140 Character) ⛔️</div>")
+      $(".error").replaceWith("<div class='error'>⛔️ It's too long! (Max 140 Character) ⛔️</div>");
       $(".error").slideDown();
       return;
 
     } else if (input === "") {
      
-      $(".error").replaceWith("<div class='error'>⛔️ It's too short! Humming more! ⛔️</div>")
+      $(".error").replaceWith("<div class='error'>⛔️ It's too short! Humming more! ⛔️</div>");
       $(".error").slideDown();
       return;
 
     } else if (input === null) {
       
-      $(".error").replaceWith("<div class='error'>⛔️ I don't know what you want to say. Please try again! ⛔️</div>")
+      $(".error").replaceWith("<div class='error'>⛔️ I don't know what you want to say. Please try again! ⛔️</div>");
       $(".error").slideDown();
       return;
     } else {
@@ -79,9 +79,9 @@ $(document).ready(function() {
         $("textarea").val('');
         $(".counter").val(140);
         loadTweets();
-      })
+      });
     }
-  })
+  });
   
   // Tweet loader
   const loadTweets = function() {
@@ -91,13 +91,13 @@ $(document).ready(function() {
       dataType: 'json',
       success: function(data) {
         console.log("Success");
-        renderTweets(data)
+        renderTweets(data);
       }
-    })
+    });
     
   };
   loadTweets();
-})
+});
 
 
 
